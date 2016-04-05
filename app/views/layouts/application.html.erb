@@ -2,20 +2,53 @@
 <html>
 <head>
   <title>FMS</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<%= csrf_meta_tags %>
 </head>
 <body>
-	<nav>
-		<ul>
-			<li>Home</li>
-			<li>About</li>
-			<li>Services</li>
-			<li>Contact</li>
-		</ul>
+	<nav class="navbar navbar-default" >
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNav" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<%= link_to 'FMS', root_path, :class => "navbar-brand" %>
+			</div> <!-- /.navbar-header -->
+			<div class="collapse navbar-collapse" id="myNav">
+					<ul class="nav navbar-nav">
+						<li class="active"><%= link_to 'Home', root_path %> <span class="sr-only">(current)</li>
+						<li><%= link_to 'About', static_pages_about_path %></li>
+						<li class="dropdown">
+							<%= link_to 'Services', "#", :class => "dropdown-toggle", "data-toggle" => "dropdown", :role => "button", "aria-haspopup" => "true", "aria-expanded" => "false"  %>
+								<ul class="dropdown-menu">
+									<li><%= link_to 'Carpet cleaning', root_path %></li>
+									<li><%= link_to 'Power washing', root_path %></li>
+									<li><%= link_to 'Window cleaning', root_path %></li>
+								</ul>
+							</li>
+						<li><%= link_to 'Contact', static_pages_contact_path %></li>
+					</ul>
+			</div>
+
+
+		</div> <!-- /.container-fluid -->
+		
 	</nav>
 <%= yield %>
+
+<footer class="site-footer">
+
+
+</footer>
 
 </body>
 </html>
