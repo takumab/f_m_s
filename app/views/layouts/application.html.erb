@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FMS</title>
+  <title>MFMS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Baloo+Da|Candal" rel="stylesheet">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -24,11 +26,10 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<%= link_to 'FMS', root_path, :class => "navbar-brand" %>
+				<%= link_to 'MFMS', root_path, :class => "navbar-brand" %>
 			</div> <!-- /.navbar-header -->
 			<div class="collapse navbar-collapse" id="myNav">
 					<ul class="nav navbar-nav">
-						<li class="active"><%= link_to 'Home', static_pages_index_path %> <span class="sr-only">(current)</li>
 						<li><%= link_to 'About', static_pages_about_path %></li>
 						<li class="dropdown">
 							<%= link_to 'Services', services_path, :class => "dropdown-toggle", "data-toggle" => "dropdown", :role => "button", "aria-haspopup" => "true", "aria-expanded" => "false"  %>
