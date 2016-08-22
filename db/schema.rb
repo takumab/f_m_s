@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160412104310) do
+ActiveRecord::Schema.define(version: 20160413102218) do
+
+  create_table "bookings", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "service_id"
+    t.float   "total"
+  end
+
+  add_index "bookings", ["service_id"], name: "index_bookings_on_service_id"
+  add_index "bookings", ["user_id"], name: "index_bookings_on_user_id"
 
   create_table "services", force: :cascade do |t|
     t.string   "name"
