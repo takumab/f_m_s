@@ -3,15 +3,17 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 $Abril: 'Abril Fatface', cursive;
 $color: #031634;
+$open-sans: open-sans;
 
 #serv {
 	font-family: $Abril;
 	color: $color;
 	text-align: center;
+	padding-bottom: 40px;
 }
 
 #cols {
-	height: 500px;
+	height: 450px;
 }
 .images {
 	height: 190px;
@@ -25,4 +27,19 @@ $color: #031634;
 
 .panel-body {
 	padding: 0;
+}
+
+.btn-default {
+	a {
+		text-decoration: none;
+		font-family: $Abril;
+		font-size: 1em;
+		color: $color;
+		&:hover {
+			color: #000;
+		}
+	}
+	&:hover {
+		background-color: #fff;
+	}
 }
