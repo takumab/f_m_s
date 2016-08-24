@@ -1,34 +1,44 @@
 <p id="notice"><%= notice %></p>
 
-<h1> Services</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Image url</th>
-      <th>Location of Service</th>
-
-      <th colspan="5"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="container">
+  <div class="row">
+    <h1 id="serv">Services</h1>
     <% @services.each do |service| %>
-      <tr>
-        <td><%= service.name %></td>
-        <td><%= service.description %></td>
-        <td><%= service.image_url %></td>
-        <td><%= service.location_of_service %></td>
-        <td><%= link_to 'Show', service %></td>
-        <td><%= link_to 'Edit', edit_service_path(service) %></td>
-        <td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <div class="col-xs-4 col-sm-4 col-md-4" id="cols">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><%= service.name %></h3>
+        </div>
+        <div class="panel-body">
+          <%= image_tag(service.image_url, class: ["images", "img-responsive"] ) %>
+        </div>
+        <div class="panel-footer">
+          <p>
+            <%= service.description %>
+          </p>
+          <p>
+            <%= service.location_of_service %>
+          </p>
+        </div>
+      </div>
+      
+      
+      
 
-<br>
+      <button type="button" class="btn btn-default">
+        <%= link_to 'Show', service %>
+      </button>
+      <button type="button" class="btn btn-default">
+        <%= link_to 'Edit', edit_service_path(service) %>
+      </button>
+      <button type="button" class="btn btn-default">
+        <%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </button>
+    </div>
+    <% end %>
+   
+  </div>
+</div>
 
 <%= link_to 'New Service', new_service_path %>

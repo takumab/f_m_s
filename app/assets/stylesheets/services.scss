@@ -1,3 +1,28 @@
 // Place all the styles related to the services controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$Abril: 'Abril Fatface', cursive;
+$color: #031634;
+
+#serv {
+	font-family: $Abril;
+	color: $color;
+	text-align: center;
+}
+
+#cols {
+	height: 500px;
+}
+.images {
+	height: 190px;
+  width: 400px;
+}
+
+.panel-title {
+	font-family: $Abril;
+	color: $color;
+}
+
+.panel-body {
+	padding: 0;
+}

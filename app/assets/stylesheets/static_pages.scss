@@ -14,9 +14,11 @@ $Abril: 'Abril Fatface', cursive;
 	border-radius: 0;
 	background: #fff;
 	font-family: $Abril;
+
 	.navbar-nav>li>a {
 		font-family: $Abril;
 		color: $color;
+		text-transform: uppercase;
 	}
 
 	.navbar-brand {
