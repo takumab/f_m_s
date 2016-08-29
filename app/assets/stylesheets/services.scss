@@ -43,3 +43,13 @@ $open-sans: open-sans;
 		background-color: #fff;
 	}
 }
+
+/* Show Page */
+
+#show_page_jumbotron {
+	background-color: $color;
+	h1 {
+		color: #fff;
+		font-family: $Abril;
+	}
+}

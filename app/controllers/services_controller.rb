@@ -25,30 +25,26 @@ class ServicesController < ApplicationController
   # POST /services.json
   def create
     @service = Service.new(service_params)
-
-    respond_to do |format|
       if @service.save
-        format.html { redirect_to @service, notice: 'Service was successfully created.' }
-        format.json { render :show, status: :created, location: @service }
+         flash[:notice] = 'Service was successfully created.'
+         redirect_to @service  
       else
-        format.html { render :new }
+         render :new 
         format.json { render json: @service.errors, status: :unprocessable_entity }
       end
-    end
   end
 
   # PATCH/PUT /services/1
   # PATCH/PUT /services/1.json
   def update
-    respond_to do |format|
+    
       if @service.update(service_params)
-        format.html { redirect_to @service, notice: 'Service was successfully updated.' }
-        format.json { render :show, status: :ok, location: @service }
+        flash[:notice] = 'Service was successfully updated.'
+        redirect_to @service 
       else
-        format.html { render :edit }
-        format.json { render json: @service.errors, status: :unprocessable_entity }
+         render :edit 
       end
-    end
+    
   end
 
   # DELETE /services/1
