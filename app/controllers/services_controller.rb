@@ -26,11 +26,10 @@ class ServicesController < ApplicationController
   def create
     @service = Service.new(service_params)
       if @service.save
-         flash[:notice] = 'Service was successfully created.'
+         flash[:success] = 'Service was successfully created.'
          redirect_to @service  
       else
          render :new 
-        format.json { render json: @service.errors, status: :unprocessable_entity }
       end
   end
 
@@ -39,7 +38,7 @@ class ServicesController < ApplicationController
   def update
     
       if @service.update(service_params)
-        flash[:notice] = 'Service was successfully updated.'
+        flash[:success] = 'Service was successfully updated.'
         redirect_to @service 
       else
          render :edit 
