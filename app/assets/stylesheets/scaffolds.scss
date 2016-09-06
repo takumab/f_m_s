@@ -1,4 +1,4 @@
-body {
+/*body {
   background-color: #fff;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
@@ -33,7 +33,7 @@ a {
 
 div {
   &.field, &.actions {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
   }
 }
 
@@ -42,9 +42,9 @@ div {
 }
 
 .field_with_errors {
-  padding: 2px;
-  background-color: red;
-  display: table;
+  padding: 0px;
+  background-color: green;
+  display: inline-block;
 }
 
 #error_explanation {
@@ -70,4 +70,4 @@ div {
     font-size: 12px;
     list-style: square;
   }
-}
+}*/

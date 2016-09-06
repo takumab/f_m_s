@@ -1,0 +1,24 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.form-group {
+	width: 250px;
+	margin-bottom: 15px;
+
+}
+
+.actions {
+	margin-top: 10px;
+	.btn.btn-primary {
+		margin: 15px;
+		position: relative;
+		left: -15px;
+		bottom: 20px;
+	}
+
+}
+
+label {
+	margin-top: 5px;
+}
