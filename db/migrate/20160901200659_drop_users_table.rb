@@ -1,9 +1,9 @@
 class DropUsersTable < ActiveRecord::Migration
   def up 
-  	drop_table :users
+  	#drop_table :users
   end
 
   def down
-  	create_table :users
+  	#create_table :users
   end
 end
