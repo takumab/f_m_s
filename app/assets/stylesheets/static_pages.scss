@@ -76,6 +76,22 @@ $Abril: 'Abril Fatface', cursive;
   color: $color;
 }
 
+/* Contact Page */
+
+h1, label {
+	font-family: $Abril;
+}
+
+#name, 
+#email, 
+#message,
+#password,
+#user_emai,
+#user_password,
+#user_password_confirmation,
+.btn.btn-primary {
+	font-family: open-sans;
+}
 
 /* Footer */
 
