@@ -1,2 +1,8 @@
 <h2>Bookings</h2>
-<p><%= @bookings %></p>
+
+<div id="bookings">
+	<%# Calendar helper method %>
+	<%= calendar do |date| %>
+		<%= date.day %>
+	<% end %>
+</div>
