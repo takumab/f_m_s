@@ -11,12 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160904105338) do
+ActiveRecord::Schema.define(version: 20160910103820) do
 
   create_table "bookings", force: :cascade do |t|
     t.integer "user_id"
     t.integer "service_id"
     t.float   "total"
+    t.date    "date"
   end
 
   add_index "bookings", ["service_id"], name: "index_bookings_on_service_id"

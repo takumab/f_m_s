@@ -3,4 +3,7 @@ class User < ActiveRecord::Base
 
 	validates :email, presence: true, uniqueness: true
 	validates :password, length: { minimum: 8 }
+
+	has_many :bookings
+	has_many :services
 end
