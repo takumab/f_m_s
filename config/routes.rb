@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get 'contact', to: 'static_pages#contact', as: 'contact'
 
   get 'static_pages/index'
+  post 'static_pages/thank_you'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
