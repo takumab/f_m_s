@@ -11,13 +11,27 @@ class BookingsController < ApplicationController
 	end
 
 	def new
+		@booking = Booking.new(date: Date.today )
 	end
 
 	def create
+		@booking = Booking.new(booking_params)
+		if @booking.save 
+			redirect_to bookings_path, :notice => "Thank You. Your appointment for #{@booking.date} has been made."
+		else
+			render 'new'
+		end
 		
 	end
 
 	def destroy
+	end
+
+
+	private
+
+	def booking_params
+		params.require(:booking).permit(:date, :description)
 	end
 
 	

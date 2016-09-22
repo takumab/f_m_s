@@ -13,11 +13,11 @@
 	
 	<%# Calendar helper method %>
 	<%= calendar @date do |date| %>
-		<%= date.day %>
+		<%= link_to date.day, new_booking_path %>
 		<% if @bookings_by_date[date] %>
 			<ul>
 				<% @bookings_by_date[date].each do |booking| %>
-					<li><%= link_to booking.name, booking %></li>
+					<li><%= link_to booking.description, booking %></li>
 				<% end %>
 				
 			</ul>

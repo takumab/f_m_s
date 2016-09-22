@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :sessions
 
   resources :services
-  resources :bookings, only: [:index, :show, :create, :destroy]
+  resources :bookings, only: [:index, :show, :create, :new, :destroy]
   get 'about',   to: 'static_pages#about',   as: 'about'
   get 'contact', to: 'static_pages#contact', as: 'contact'
 
